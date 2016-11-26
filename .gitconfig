@@ -1,0 +1,11 @@
+[user]
+	email = carmelo.piccione@gmail.com
+	name = carm
+[push]
+	default = matching
+[alias]
+	ci = commit
+	co = checkout
+	st = status
+[core]
+	editor = nvim
