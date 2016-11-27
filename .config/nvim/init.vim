@@ -7,6 +7,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'Shougo/deoplete.nvim'
 Plug 'dkprice/vim-easygrep'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 " set statusline+=%#warningmsg#
@@ -21,6 +22,7 @@ let g:syntastic_auto_jump =  1
 let g:syntastic_aggregate_errors = 1
 let g:deoplete#enable_at_startup = 1
 set shiftwidth=2
+set hidden
 syn on
 colorscheme elflord
 set nu!
