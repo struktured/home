@@ -2,45 +2,57 @@ set shortmess+=A
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-unimpaired'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
-" Plug 'cloudhead/neovim-fuzzy'
+Plug 'cloudhead/neovim-fuzzy'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'Shougo/deoplete.nvim'
 Plug 'dkprice/vim-easygrep'
+Plug 'neomake/neomake'
 Plug 'vim-airline/vim-airline'
+Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
 
-
 let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_auto_jump =  1
+let g:syntastic_auto_jump =  0
 let g:syntastic_aggregate_errors = 1
 let g:deoplete#enable_at_startup = 1
+let g:EasyGrepRecursive=1
+
 set shiftwidth=2
 set hidden
 syn on
 colorscheme elflord
 set nu!
 set list
+
+filetype indent on
+filetype plugin on
+au filetype ocaml setlocal expandtab
+set wildignore+=*/_build/*
+set wildignore+=*/target/*
+
+
+
+" ** START Custom Ocaml Setup START
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 execute "set rtp+=" . g:opamshare . "/merlin/vim"
 execute "set rtp+=" . g:opamshare . "/merlin/vimbufsync"
 " execute ":source " . g:opamshare . "/vim/syntax/ocp-indent.vim"
 let g:syntastic_ocaml_checkers = ['merlin']
-
-filetype indent on
-filetype plugin on
 au BufRead,BufNewFile *.ml,*.mli,*.mlt compiler ocaml
+" ** END Custom Ocmal Setup END
 
-            
 " ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
 let s:opam_share_dir = system("opam config var share")
 let s:opam_share_dir = substitute(s:opam_share_dir, '[\r\n]*$', '', '')
@@ -77,4 +89,4 @@ endfor
 if count(s:opam_available_tools,"ocp-indent") == 0
   source "/home/carm/.opam/4.02.3/share/vim/syntax/ocp-indent.vim"
 endif
-
+" ## end of OPAM user-setup addition for vim / ocp-indent ## keep this line
