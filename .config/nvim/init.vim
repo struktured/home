@@ -2,7 +2,6 @@ set shortmess+=A
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-unimpaired'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
