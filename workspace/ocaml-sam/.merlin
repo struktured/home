@@ -1,0 +1,7 @@
+PKG core
+PKG kaputt
+S src/test
+S src/lib
+S src/lib/test
+B _build/**
+

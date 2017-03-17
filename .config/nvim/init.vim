@@ -14,6 +14,7 @@ Plug 'neomake/neomake'
 Plug 'vim-airline/vim-airline'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'struktured/vim-javacomplete2'
+Plug 'flazz/vim-colorschemes'
 call plug#end()
 
 " set statusline+=%#warningmsg#
@@ -33,7 +34,7 @@ let g:deoplete#enable_at_startup = 0
 set shiftwidth=2
 set hidden
 syn on
-colorscheme torte
+colorscheme candy
 set nu!
 set list
 
