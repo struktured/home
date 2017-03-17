@@ -6,7 +6,6 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-unimpaired'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
-Plug 'cloudhead/neovim-fuzzy'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'Shougo/deoplete.nvim'
@@ -14,6 +13,7 @@ Plug 'dkprice/vim-easygrep'
 Plug 'neomake/neomake'
 Plug 'vim-airline/vim-airline'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'struktured/vim-javacomplete2'
 call plug#end()
 
 " set statusline+=%#warningmsg#
@@ -28,11 +28,12 @@ let g:syntastic_auto_jump =  0
 let g:syntastic_aggregate_errors = 1
 let g:deoplete#enable_at_startup = 1
 let g:EasyGrepRecursive=1
+let g:deoplete#enable_at_startup = 0
 
 set shiftwidth=2
 set hidden
 syn on
-colorscheme elflord
+colorscheme torte
 set nu!
 set list
 

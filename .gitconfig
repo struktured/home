@@ -7,5 +7,8 @@
 	ci = commit
 	co = checkout
 	st = status
+	webui = !/home/carm/.git-webui/release/libexec/git-core/git-webui
 [core]
 	editor = nvim
+[webui]
+	autoupdate = true
