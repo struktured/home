@@ -115,6 +115,5 @@ if ! shopt -oq posix; then
 fi
 alias svn-stash='python ~/.svn-stash-command/svn-stash.py'
 
-export JAVA_HOME=/opt/java/latest
-export ANT_HOME=/opt/ant/latest
-export PATH=$JAVA_HOME/bin:$ANT_HOME/bin:$PATH
+export JAVA_HOME=/usr/lib/jvm/default-java
+export PATH=$JAVA_HOME/bin:$PATH
