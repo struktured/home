@@ -1,1 +1,1 @@
-Guifont Dejavu Sans Mono:h14
+Guifont Monospace:h13
